@@ -1,39 +1,43 @@
-# _Data Engineering Week 2 Code Review_
+# _Data Engineering Week 3 Code Review_
 
 #### By _**Drew White**_
 
-#### _Code review for week 2 of Data Engineering: Intermediate Python_
+#### _Code review for week 3 of Data Engineering: Advanced Python_
 
 ## Technologies Used
 
 - _Python_
 - _Jupyter Notebooks_
+- _Pytest_
+- _Faker_
 
 ## Description
 
- _Python code review for week 2 of Data Engineering showing the use of functions, exception handling, **args, **kwargs, class, methods, lambda functions, type hints, and doc strings ._ 
+ _Python code review for week 3 of Data Engineering demonstrating use of a mini ETL pipeline to process a list of colors initially generated through the use of Faker. This code review also demonstrates the use of Pytest. Steps taken in code review are as follows:_ 
 
-- `fourth_place()`-
-- _Takes list as and argument and returns 4th item in list. If list has less than 4 items function uses try/except and returns string stating list has less than 4 items_
-- `subtracter_lambda()`-
-- _lambda function that takes two numbers as arguments and subtracts second number from first number_ 
-- `greatest()`-
-- _Takes dictionary that has keys that are strings and values that are integers. Finds greatest value and returns tuple with greatest value and corresponding key._ 
-- `class Shoe`-
-- _Creates a class called shoe with following attributes: US size : int, color : str, and smelly : bool. In class, method called `euro_size()` is contained that converts US size to Euro size._
-- `galaxy()`-
-- _Takes positional argument with name of galaxy, a varying number of arguments for objects within galaxy, a keyword argument for pluto is planet that defaults to true, and a varying number of keyword arguments that state the planet as the key and the color as the value. Prints a paragraph that summarizes the facts input as arguments._
+- _Generate list of 20 colors named `color_list` using Faker._
+- _Create `remove_dups()` function to remove duplicate colors from list._
+- _Use `dictionary comprehension` to convert `color_list` to dictionary named `color_dict` with keys as colors and values as the integer length of the color name._
+- _Write `color_dict` to JSON._ 
+- _`color_dict.json` saves to `data` folder._
+- _Read `color_dict` JSON and filter back only colors with a value of 4 or more._
+- _Make a file called `test_remove_dups.py` using `@pytest.mark.parametrize()` to test `remove_dups()`_
 
 ## Setup/Installation Requirements
 
 - _Must have Python 3.7 installed_
-- _Clone this with command `git clone https://github.com/Drewrwhite/data_week_2.git`_
-- _Open `main.py` file_
+- _Clone this with command:  `$ git clone https://github.com/Drewrwhite/data_week_3.git`_
+- _In terminal, navigate to directory where repository was cloned:  `$ cd "directory"`_
+- _Create venv:  `$ python3.7 -m venv venv`_
+- _Activate venv:  `$ source venv/bin/activate`_
+- _Install requirements:  `$ pip install -r requirements.txt`_
+- _Open in VSCode:  `$ code .`_
+- _In terminal input:  `$ pytest` to test `remove_dups()`_
 
 
 ## Tests
  
-- _All tests for code were ran in `test.ipynb` file_
+- _All tests for code were ran in `main.ipynb` file_
 
 ## Known Bugs
 
