@@ -3,7 +3,7 @@ from main import remove_dups
 
 def test_empty_arg():
     with pytest.raises(Exception) as e:
-        remove_dups()
+      assert remove_dups() == "Empty"
 
 @pytest.mark.parametrize("list1, expected_result", [
 ([1, 3, 5], [1, 3, 5]), 
@@ -16,4 +16,4 @@ def test_empty_arg():
 
 ])
 def test_remove_dups(list1, expected_result):
-  assert remove_dups(list1) == expected_result
+  assert (remove_dups(list1)) == expected_result
