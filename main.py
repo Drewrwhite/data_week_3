@@ -8,7 +8,7 @@ color_list = [fake.color_name() for x in range(20)]
 # uses list comp
 print(color_list)
 
-def remove_dups(list1: list) -> None:
+def remove_dups(list1: list) -> list:
   """ Remove duplicates from list using dict comp
 
   Args:
@@ -21,6 +21,7 @@ def remove_dups(list1: list) -> None:
     return list(dict.fromkeys(list1))
   else:
     return(f"Empty")
+
 
 color_list = remove_dups(color_list)
 
