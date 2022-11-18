@@ -13,10 +13,14 @@ def remove_dups(list1: list) -> None:
 
   Args:
       list1 (list): List to check for duplicates
+      none : returns "empty"
   Return: 
       list with no duplicates
-  """
-  return list(dict.fromkeys(list1))
+  """ 
+  if list1 != None:
+    return list(dict.fromkeys(list1))
+  else:
+    return(f"Empty")
 
 color_list = remove_dups(color_list)
 
